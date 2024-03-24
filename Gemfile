@@ -76,4 +76,7 @@ group :test do
 
   # One-liners to test common Rails functionality
   gem "shoulda-matchers", "~> 6.0"
+
+  # Code coverage analysis
+  gem "simplecov"
 end
