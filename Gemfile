@@ -56,6 +56,9 @@ gem "faker"
 # HTTP Client for Ruby
 gem "faraday"
 
+# Collection of gems to help you structure growing Ruby applications
+gem "trailblazer-rails"
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ]
@@ -90,6 +93,8 @@ end
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
+
+  # Interface to interact with web browsers
   gem "selenium-webdriver"
 
   # One-liners to test common Rails functionality
