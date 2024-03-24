@@ -65,6 +65,9 @@ group :development, :test do
 
   # Fixtures replacement with a straightforward definition syntax, support for multiple build strategies
   gem "factory_bot_rails"
+
+  # Analyze and detects n + 1 query problems
+  gem "bullet"
 end
 
 group :development do
