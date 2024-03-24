@@ -57,10 +57,10 @@ group :development do
   gem "web-console"
 
   # Replace rails error page with a much and more useful error page
-  # gem "better_errors"
+  gem "better_errors"
 
-  # Optional, but necessary to use Better Errors' advanced features
-  # gem "binding_of_caller"
+  # Optional, but necessary to use Better Errors advanced features
+  gem "binding_of_caller"
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
