@@ -47,11 +47,20 @@ gem "bootsnap", require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ]
+
+  # Alternative testing library for Minitest
+  gem "rspec-rails", "~> 6.1.0"
 end
 
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
+
+  # Replace rails error page with a much and more useful error page
+  # gem "better_errors"
+
+  # Optional, but necessary to use Better Errors' advanced features
+  # gem "binding_of_caller"
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
