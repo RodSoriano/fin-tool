@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  psql-database:
+    image: postgres
+    environment:
+      POSTGRES_DATABASE: ${DATABASE_NAME}
+      POSTGRES_USER: ${DATABASE_USER}
+      POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
+    ports:
+      - '5433:5432'
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    networks:
+      - fin-tool
+
+  rails-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file:
+      - .env
+    ports:
+      - '3000:3000'
+    depends_on:
+      - psql-database
+    volumes:
+      - .:/rails-app:delegated
+    networks:
+      - fin-tool
+
+networks:
+  fin-tool:
+
+volumes:
+  postgres-data:
