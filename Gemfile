@@ -62,6 +62,12 @@ gem "trailblazer-rails"
 # Vite adapter for Rails application
 gem 'vite_rails'
 
+# Inertia replaces your application's view layer. The views returned by your application are JavaScript page components. [https://inertiajs.com]
+gem "inertia_rails", "~> 3.0"
+
+# Brings Rails named routes to modern javascript (https://github.com/elmassimo/js_from_routes)
+gem "js_from_routes", "~> 2.0.4" # group: :development
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ]
