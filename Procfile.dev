@@ -1,0 +1,3 @@
+
+vue: bin/vite dev
+rails: bin/rails s
