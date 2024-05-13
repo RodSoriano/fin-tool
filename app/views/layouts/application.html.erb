@@ -2,12 +2,11 @@
 <html>
   <head>
     <title>FinTool</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name='viewport' content='width=device-width,initial-scale=1'>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
+    <%= stylesheet_link_tag 'application', 'data-turbo-track': 'reload' %>
     <%= vite_client_tag %>
     <%= vite_javascript_tag 'application' %>
     <!--
@@ -19,7 +18,7 @@
 
       Visit the guide for more information: https://vite-ruby.netlify.app/guide/rails
     -->
-
+    <%= javascript_importmap_tags %>
   </head>
 
   <body>
