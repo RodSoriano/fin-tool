@@ -38,7 +38,7 @@
   // here is just an example
   // we can update this later
   const resources = [
-    { name: 'Categories', uri: '/categories', icon: 'mdi-rhombus-split' },
+    { name: 'to demo index route', uri: '/demos', icon: 'mdi-rhombus-split' },
   ];
 </script>
 
