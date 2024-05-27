@@ -1,4 +1,6 @@
 class DemosController < ApplicationController
+  # TODO: delete the demo model and all its related files
+  # once the first release is merged into main
   before_action :set_all_demos, only: %i[ index ]
 
   # GET /demos or /demos.json
