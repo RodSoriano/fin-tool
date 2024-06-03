@@ -10,9 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_05_27_211523) do
+ActiveRecord::Schema[7.1].define(version: 2024_06_03_054424) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "companies", force: :cascade do |t|
+    t.string "name", comment: "Name of the company"
+    t.string "email", comment: "Email of the company"
+    t.string "location", comment: "Physical location of the company, can be an address"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "company_users", id: false, force: :cascade do |t|
+    t.bigint "company_id", null: false
+    t.bigint "user_id", null: false
+    t.boolean "admin", default: false, comment: "This field indicates whether a user is an admin of the company or not"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["company_id", "user_id"], name: "index_company_users_on_company_id_and_user_id"
+    t.index ["user_id", "company_id"], name: "index_company_users_on_user_id_and_company_id"
+  end
 
   create_table "demos", force: :cascade do |t|
     t.string "name"
