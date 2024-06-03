@@ -25,7 +25,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_03_054424) do
   create_table "company_users", id: false, force: :cascade do |t|
     t.bigint "company_id", null: false
     t.bigint "user_id", null: false
-    t.boolean "admin", comment: "This field indicates whether a user is an admin of the company or not"
+    t.boolean "admin", default: false, comment: "This field indicates whether a user is an admin of the company or not"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["company_id", "user_id"], name: "index_company_users_on_company_id_and_user_id"
