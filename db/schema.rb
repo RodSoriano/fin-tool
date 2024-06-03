@@ -22,14 +22,14 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_03_054424) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "companies_users", primary_key: "[:company_id, :user_id]", id: { comment: "This is a composite primary key out of company and user ids" }, force: :cascade do |t|
+  create_table "company_users", id: false, force: :cascade do |t|
     t.bigint "company_id", null: false
     t.bigint "user_id", null: false
     t.boolean "admin", comment: "This field indicates whether a user is an admin of the company or not"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["company_id", "user_id"], name: "index_companies_users_on_company_id_and_user_id"
-    t.index ["user_id", "company_id"], name: "index_companies_users_on_user_id_and_company_id"
+    t.index ["company_id", "user_id"], name: "index_company_users_on_company_id_and_user_id"
+    t.index ["user_id", "company_id"], name: "index_company_users_on_user_id_and_company_id"
   end
 
   create_table "demos", force: :cascade do |t|
