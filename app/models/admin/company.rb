@@ -1,11 +1,15 @@
-class Admin::Company < ApplicationRecord
-	has_many :company_users,
-		class_name: 'Admin::CompanyUser',
-		inverse_of: 'company'
+# frozen_string_literal: true
 
-	has_many :users, through: :company_users
+module Admin
+  class Company < ApplicationRecord
+    has_many :company_users,
+             class_name: 'Admin::CompanyUser',
+             inverse_of: 'company'
 
-	validates :name, presence: true, uniqueness: true
-	validates :email, presence: true, uniqueness: true
-	validates :location, presence: true
+    has_many :users, through: :company_users
+
+    validates :name, presence: true, uniqueness: true
+    validates :email, presence: true, uniqueness: true
+    validates :location, presence: true
+  end
 end
