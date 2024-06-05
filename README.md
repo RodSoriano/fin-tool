@@ -6,7 +6,7 @@ Node ^20.12.0
 ```
 
 ## Set Up
-First we need to clone the repository through HTTP,
+First we need to clone the repository through HTTP.
 
 Once cloned in our local machine we need to have the minimum requirements already in place.
 
